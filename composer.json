@@ -1,0 +1,22 @@
+{
+    "name": "hugomatheus/hit",
+    "description": "meu primeiro package, tenho boas intenções hehe.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hugomatheus\\Hit\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hugomatheus\\Hit\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

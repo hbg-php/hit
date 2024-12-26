@@ -1,0 +1,49 @@
+name: CI for Laravel Package
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version: [7.4, 8.0, 8.1, 8.2]
+
+    steps:
+      # Baixar o código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configurar a versão do PHP
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}  # Variável para rodar em diferentes versões do PHP
+          extensions: mbstring, bcmath, opcache, sqlite3
+          coverage: none
+
+      # Instalar dependências via Composer
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-progress --no-interaction
+
+      # Rodar os testes com PHPUnit
+      - name: Run tests
+        run: |
+          ./vendor/bin/phpunit
+        env:
+          DB_CONNECTION: sqlite
+          CACHE_DRIVER: file
+
+      # Exibir status final
+      - name: Display PHP version
+        run: php -v
