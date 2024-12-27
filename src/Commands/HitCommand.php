@@ -2,6 +2,6 @@
 
 namespace Commands;
 
-use Illuminate\Console\Command;
+use Symfony\Component\Console\Command\Command;
 
 class HitCommand extends Command {}
