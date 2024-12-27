@@ -3,7 +3,5 @@
 namespace Commands;
 
 use Illuminate\Console\Command;
-class HitCommand extends Command
-{
 
-}
+class HitCommand extends Command {}
