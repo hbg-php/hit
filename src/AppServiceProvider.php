@@ -1,6 +1,3 @@
 <?php
 
-class AppServiceProvider
-{
-
-}
+class AppServiceProvider {}
