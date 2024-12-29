@@ -37,7 +37,7 @@ final class Config
 
         $basePath = dirname(array_keys(ClassLoader::getRegisteredLoaders())[0]);
 
-        $contents = (string) file_get_contents($basePath.'/peck.json');
+        $contents = (string) file_get_contents($basePath.'/hit.json');
 
         /** @var array{
          *     ignore?: array{
