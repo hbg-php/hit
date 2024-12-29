@@ -15,8 +15,10 @@ readonly class FileSystemHiter implements Hiter
 {
     public function __construct(
         private Config $config,
-        private Hithunter $hithunter,
-    ) {}
+        private Hithunter $hithunter
+    ) {
+        //
+    }
 
     /**
      * {@inheritDoc}
