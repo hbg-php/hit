@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Hit;
 
-use Hit\Hiters\FileSystemHiter;
+use Hit\Hiters\FileSystemHitter;
 use Hit\Services\InMemoryHitHunter;
 
 final readonly class Kernel
@@ -12,7 +12,7 @@ final readonly class Kernel
     /**
      * Creates a new instance of Kernel.
      *
-     * @param  array<int, Contracts\Hiter>  $hiters
+     * @param  array<int, Contracts\Hitter>  $hiters
      */
     public function __construct(
         private array $hiters,
@@ -30,7 +30,7 @@ final readonly class Kernel
 
         return new self(
             [
-                new FileSystemHiter($config, $inMemoryHiter),
+                new FileSystemHitter($config, $inMemoryHiter),
             ],
         );
     }

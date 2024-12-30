@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Hit\Hiters;
 
 use Hit\Config;
-use Hit\Contracts\Hiter;
+use Hit\Contracts\Hitter;
 use Hit\Contracts\Hithunter;
 use Hit\ValueObjects\Issue;
 use Hit\ValueObjects\Misspelling;
@@ -14,7 +14,7 @@ use Symfony\Component\Finder\Finder;
 /**
  * @internal
  */
-readonly class FileSystemHiter implements Hiter
+readonly class FileSystemHitter implements Hitter
 {
     public function __construct(
         private Config $config,

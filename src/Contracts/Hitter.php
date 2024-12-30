@@ -7,7 +7,7 @@ use Hit\ValueObjects\Issue;
 /**
  * @internal
  */
-interface Hiter
+interface Hitter
 {
     /**
      * Hit the code for issues.
