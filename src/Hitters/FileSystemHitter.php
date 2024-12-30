@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hit\Hiters;
+namespace Hit\Hitters;
 
 use Hit\Config;
 use Hit\Contracts\Hitter;

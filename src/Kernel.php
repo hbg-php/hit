@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Hit;
 
-use Hit\Hiters\FileSystemHitter;
+use Hit\Hitters\FileSystemHitter;
 use Hit\Services\InMemoryHitHunter;
 
 final readonly class Kernel
