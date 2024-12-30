@@ -34,7 +34,7 @@ To use Hit, you need to have Aspell installed on your system. Aspell is a spelli
 
 ## Installing Aspell
 On Ubuntu or Debian-based distributions, you can install Aspell using the following commands:
-    
+
 ```bash
 sudo apt-get install aspell aspell-pt
 ```
