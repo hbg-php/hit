@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Hit\Hitters;
 
 use Hit\Config;
-use Hit\Contracts\Hitter;
 use Hit\Contracts\Hithunter;
+use Hit\Contracts\Hitter;
 use Hit\ValueObjects\Issue;
 use Hit\ValueObjects\Misspelling;
 use Symfony\Component\Finder\Finder;
