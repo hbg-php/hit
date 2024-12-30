@@ -2,7 +2,7 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/hbg-php/hit/main/docs/logo-hit.png" alt="Hit example" height="300">
     <p align="center">
-        <a href="https://github.com/hbg-php/hit/actions"><img alt="GitHub Workflow Status (main)" src="https://img.shields.io/github/actions/workflow/status/hbg-php/hit/tests.yml"></a>
+        <a href="https://github.com/hbg-php/hit/actions"><img alt="GitHub Workflow Status (main)" src="https://img.shields.io/github.com/hbg-php/hit/actions/workflows/test.yml"></a>
         <a href="https://packagist.org/packages/hbg-php/hit"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/hbg-php/hit"></a>
         <a href="https://packagist.org/packages/hbg-php/hit"><img alt="Latest Version" src="https://img.shields.io/packagist/v/hbg-php/hit"></a>
         <a href="https://packagist.org/packages/hbg-php/hit"><img alt="License" src="https://img.shields.io/packagist/l/hbg-php/hit"></a>
