@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Hit\Hitters;
 
 use Hit\Config;
-use Hit\Contracts\Hithunter;
 use Hit\Contracts\Hitter;
 use Hit\ValueObjects\Issue;
 use Hit\ValueObjects\Misspelling;
@@ -17,9 +16,11 @@ use Symfony\Component\Finder\Finder;
 readonly class FileSystemHitter implements Hitter
 {
     protected \EnchantBroker $enchantBroker;
+
     protected \EnchantDictionary $dictionary;
 
-    public function __construct(private Config $config) {
+    public function __construct(private Config $config)
+    {
         $this->enchantBroker = enchant_broker_init();
         $this->dictionary = enchant_broker_request_dict($this->enchantBroker, 'pt_BR');
     }
@@ -63,6 +64,9 @@ readonly class FileSystemHitter implements Hitter
         return array_values($issues);
     }
 
+    /**
+     * @return Misspelling[]
+     */
     private function checkSpelling(string $text): array
     {
         $misspelledWords = [];
@@ -71,12 +75,10 @@ readonly class FileSystemHitter implements Hitter
         foreach ($words as $word) {
             $word = trim($word);
 
-            if (!empty($word)) {
-                if (!enchant_dict_quick_check($this->dictionary, $word)) {
-                    $suggestions = enchant_dict_suggest($this->dictionary, $word);
+            if ($word !== '' && $word !== '0' && ! enchant_dict_quick_check($this->dictionary, $word)) {
+                $suggestions = enchant_dict_suggest($this->dictionary, $word);
 
-                    $misspelledWords[] = new Misspelling($word, array_slice($suggestions, 0, 4));
-                }
+                $misspelledWords[] = new Misspelling($word, array_slice($suggestions, 0, 4));
             }
         }
 
