@@ -14,7 +14,8 @@
         "nunomaduro/termwind": "^2.3",
         "symfony/console": "^7.2.1",
         "symfony/finder": "^7.2",
-        "tigitz/php-spellchecker": "^0.7.0"
+        "tigitz/php-spellchecker": "^0.7.0",
+        "ext-enchant": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.18.3",
