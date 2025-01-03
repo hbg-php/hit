@@ -21,6 +21,8 @@ final readonly class InMemoryHitHunter implements Hithunter
 
     public static function default(): self
     {
+        putenv('LANG=pt_BR.UTF-8');
+
         return new self(
             Config::instance(),
             Aspell::create()
